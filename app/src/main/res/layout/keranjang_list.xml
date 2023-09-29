@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="8dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardMaxElevation="12dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/keranjangProductImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/image_placeholder_fg"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/keranjangProductTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_vertical_margin"
+            android:layout_marginLeft="@dimen/item_horizontal_margin"
+            android:text="Title"
+            app:layout_constraintStart_toEndOf="@id/keranjangProductImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/keranjangProductVarian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_horizontal_margin"
+            android:text="Varian: S"
+            app:layout_constraintStart_toEndOf="@id/keranjangProductImage"
+            app:layout_constraintTop_toBottomOf="@id/keranjangProductTitle"/>
+
+        <TextView
+            android:id="@+id/keranjangProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_horizontal_margin"
+            android:layout_marginTop="@dimen/item_horizontal_margin"
+            android:text="Rp123.456"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/keranjangProductImage"
+            app:layout_constraintTop_toBottomOf="@id/keranjangProductVarian" />
+
+        <TextView
+            android:id="@+id/keranjangJumlahTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/item_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Jumlah: "
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/keranjangProductImage"
+            app:layout_constraintTop_toTopOf="@id/keranjangProductJumlah" />
+
+        <EditText
+            android:id="@+id/keranjangProductJumlah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_vertical_margin"
+            android:ems="2"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/keranjangJumlahTitle" />
+
+        <Button
+            android:id="@+id/keranjangHapusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/item_horizontal_margin"
+            android:layout_marginBottom="@dimen/item_vertical_margin"
+            android:text="Hapus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

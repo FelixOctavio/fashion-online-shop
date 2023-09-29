@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+    tools:context=".ui.mainmenu.keranjang.KeranjangFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/layout_keranjang"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_upselling">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_keranjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:text="Keranjang:"
+                android:textSize="@dimen/title_text_size" />
+
+            <TextView
+                android:id="@+id/warning_keranjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kosong" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_keranjang"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_upselling"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_keranjang"
+        app:layout_constraintBottom_toTopOf="@id/layout_wishlist_upselling"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/title_upselling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mungkin anda terbarik dengan barang terbaru dari kami:" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_upselling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_wishlist_upselling"
+        app:layout_constraintTop_toBottomOf="@id/layout_upselling"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar_keranjang"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/title_wishlis_upselling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wujudkan wishlist anda:" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_wishlist_upselling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_bar_keranjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_wishlist_upselling">
+
+        <TextView
+            android:id="@+id/titleTotalKeranjang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Total Harga"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/totalKeranjangText"
+            app:layout_constraintTop_toTopOf="@id/bottom_bar_keranjang" />
+
+        <TextView
+            android:id="@+id/totalKeranjangText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Rp123.426"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleTotalKeranjang" />
+
+        <Button
+            android:id="@+id/keranjangBeliButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Beli"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/bottom_bar_keranjang" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

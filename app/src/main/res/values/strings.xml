@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">UAS-FashionStore</string>
+    <string name="action_signout">Sign Out</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="new_user_fragment">Welcome Screen</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="has_account">Sudah punya akun? Klik di sini</string>
+    <string name="previous">Previous</string>
+    <string name="seller">Seller</string>
+    <string name="user">Consumer</string>
+
+    <string name="welcome_text">Selamat datang di Aplikasi Fashion Store.</string>
+    <string name="confirm_user">Apakah anda seorang seller atau calon pembeli?.</string>
+    <string name="lorem_ipsum">
+        lorem ipsum
+    </string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome "</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_keranjang">Keranjang</string>
+    <string name="title_beli">Beli</string>
+    <string name="title_add_item">Add Item</string>
+    <string name="product_name">Product Name</string>
+    <string name="description">Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="title_wishlist">Wishlist</string>
+    <string name="title_transactions">Transactions</string>
+</resources>
